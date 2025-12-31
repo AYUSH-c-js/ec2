@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/todos';
+const ip = import.meta.env.VITE_BACKEND_IP || window.location.hostname;
+const API_URL = `http://${ip}:3000/todos`;
 
 export interface Todo {
     id: number;
